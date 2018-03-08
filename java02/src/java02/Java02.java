@@ -34,7 +34,6 @@ public class Java02 extends javax.swing.JFrame {
 
         msg.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
         msg.setForeground(new java.awt.Color(236, 31, 31));
-        msg.setText("Mensagem");
 
         btn.setText("CLICK");
         btn.addActionListener(new java.awt.event.ActionListener() {
@@ -60,7 +59,7 @@ public class Java02 extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(57, Short.MAX_VALUE)
+                .addContainerGap(75, Short.MAX_VALUE)
                 .addComponent(msg)
                 .addGap(56, 56, 56)
                 .addComponent(btn)
