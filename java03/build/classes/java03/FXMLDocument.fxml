@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="java03.FXMLDocumentController">
+    <children>
+        <Button fx:id="button" layoutX="117.0" layoutY="105.0" onAction="#handleButtonAction" text="Clica Aqui">
+         <font>
+            <Font name="Arial" size="13.0" />
+         </font></Button>
+        <Label fx:id="label" layoutX="66.0" layoutY="42.0" minHeight="16" minWidth="69" prefHeight="46.0" prefWidth="179.0" textFill="#e80a0a">
+         <font>
+            <Font size="30.0" />
+         </font></Label>
+    </children>
+</AnchorPane>
