@@ -285,7 +285,7 @@ public class Java05 extends javax.swing.JFrame {
 
    public static boolean isNumeric (String s) {
 		try {
-			Long.parseLong (s);
+			Float.parseFloat(s);
 		} catch (NumberFormatException ex) {
 			return false;
 		}
