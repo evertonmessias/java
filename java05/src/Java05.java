@@ -34,7 +34,7 @@ public class Java05 extends javax.swing.JFrame {
     String resposta(int op){
         switch (op) {
             case 0:
-                return "A Não pode ser Zero!";
+                return "Valor 'A' não pode ser Zero!";
             case 1:
                 return "Não Existe Raizes Reais!";
             default:
