@@ -100,6 +100,11 @@ public class Java05 extends javax.swing.JFrame {
 
         jButton2.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
         jButton2.setText("APAGAR");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         raiz1.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
         raiz1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -156,14 +161,13 @@ public class Java05 extends javax.swing.JFrame {
                         .addComponent(raiz2, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(resposta, javax.swing.GroupLayout.PREFERRED_SIZE, 323, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(94, 94, 94))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addGap(172, 172, 172))))
+                .addGap(0, 177, Short.MAX_VALUE)
+                .addComponent(jLabel2)
+                .addGap(172, 172, 172))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(103, 103, 103)
+                .addComponent(resposta, javax.swing.GroupLayout.PREFERRED_SIZE, 323, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -215,6 +219,16 @@ public class Java05 extends javax.swing.JFrame {
        raiz2.setText("X2 = "+r2);
        }
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        valA.setText("");
+        valB.setText("");
+        valC.setText("");
+        resposta.setText("Resposta:");
+        delta.setText("Delta");
+        raiz1.setText("Raiz X1");
+        raiz2.setText("Raiz X2");
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
