@@ -9,7 +9,8 @@ public class Eq2grau {
     public char q = (char)178;
     
     /*this não é usado pois as modificações dos atributos vem de fora da Classe
-    (this é usado para modificar atributos dentro da propria classe, refere-se ao objeto que chamou ...)
+    (this é usado para modificar atributos dentro da propria classe, refere-se 
+    ao objeto que chamou ...) e aqui é TUDO PUBLICO
     */
         
     public String escrever(){        
