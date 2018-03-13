@@ -19,19 +19,7 @@ p.setIdade(55);
 p.aula();a.aula();
 
 System.out.println(a.toString());
-System.out.println(p.toString());
+System.out.println(p.toString());  
 
-
-
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    }
-    
+    }    
 }
