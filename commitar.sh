@@ -2,7 +2,7 @@
 clear
 rm .gitignore
 echo "*********** REMOVIDO GITIGNORE OK ******************"
-git add *.*
+git add *
 echo "**************** GIT ADD OK ************************"
 data=`date +%d-%m-%Y_%H:%M:%S`
 git commit -m $data
