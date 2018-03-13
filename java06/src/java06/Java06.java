@@ -6,4 +6,6 @@ public class Java06 {
         Luta luta = new Luta();
         luta.marcarLuta(l0, l1);
         luta.lutar();
-        l0.status();l1.status();   }}
+        l0.status();l1.status();
+        System.out.println("\n*********\n");        
+        System.out.println(luta.getDesafiado().getNome());}}
