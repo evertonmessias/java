@@ -1,6 +1,5 @@
 #!/bin/bash
 clear
-git config credential.helper store
 rm .gitignore
 echo "*********** REMOVIDO GITIGNORE OK ******************"
 git add *
