@@ -170,13 +170,9 @@ public class Java05 extends javax.swing.JFrame {
        resposta.setText("Digite os Valores Numéricos!");}
        else{
            
-       Eq2grau equac = new Eq2grau();
-       
-       equac.valorA = Float.parseFloat(a);
-       equac.valorB = Float.parseFloat(b);
-       equac.valorC = Float.parseFloat(c); 
-       int opc = (int)equac.calcular()[3];
-       resposta.setText(equac.resposta(opc));
+       Eq2grau equac = new Eq2grau(Float.parseFloat(a),Float.parseFloat(b),Float.parseFloat(c));
+   
+       resposta.setText(equac.resposta());
        String de = String.format("%.2f",equac.calcular()[0]);
        String r1 = String.format("%.2f",equac.calcular()[1]);
        String r2 = String.format("%.2f",equac.calcular()[2]);
