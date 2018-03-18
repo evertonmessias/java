@@ -18,11 +18,7 @@ public class Java08 {
     public void busca(char letra){
         acum=0;
         acerto = false;
-        ok = true;        
-        for (x=0;x<i;x++){      
-            if(coringa[x]==letra){ 
-                ok = false;
-                return;}}        
+        ok = true;
         for (x=0;x<26;x++){      
             if(repetido[x]==letra){ 
                 ok = false;
