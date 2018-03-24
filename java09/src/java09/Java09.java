@@ -16,7 +16,7 @@ public class Java09 {
         int i;
         char caracter;
         
-        for (i=0;i<1024;i++){
+        for (i=0;i<512;i++){
             caracter = (char)i;
             System.out.println(i+" ==> "+caracter);        
         }
