@@ -1,0 +1,17 @@
+#site, fieldset {
+	display: block;
+	position: relative;
+	margin: 0 auto;
+}
+#site {
+	width: 500px;
+	text-align: center;
+	1
+}
+
+fieldset {
+	width: 200px;
+}
+span{
+	color: #f00;
+}

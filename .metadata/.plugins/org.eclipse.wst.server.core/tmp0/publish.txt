@@ -1,3 +1,4 @@
 #Tomcat publish data
-#Thu Mar 12 23:34:26 BRT 2020
+#Fri Mar 13 17:23:27 BRT 2020
+org.eclipse.jst.jee.server\:java12=C\:\\xampp\\tomcat\\wtpwebapps\\java12
 org.eclipse.jst.jee.server\:java11=C\:\\xampp\\tomcat\\wtpwebapps\\java11
