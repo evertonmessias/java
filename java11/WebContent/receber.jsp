@@ -7,11 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>Primeira pagina JAVA</h1>
-<% out.print("Digite Algo..."); %>
-<form action="receber.jsp" method="get">
-<input type="text" id="nome" name="nome"/>
-<input type="submit" value="Enviar"/>
-</form>
+<%
+String nome = "Nome recebido: ";
+out.print(nome + request.getParameter("nome")); %>
 </body>
 </html>
