@@ -39,7 +39,7 @@ function apagar(y) {
     $('#linha' + y).css({ 'background-color': '#ccc' });
     idd = y;
     $("#botaoapagar").click(function () {               
-        $.post("app/validar.jsp", { botao:"botaoapagar",idd: idd }, function (mostrar) {
+        $.post("app/valida.jsp", { botao:"botaoapagar",idd: idd }, function (mostrar) {
             $("#quadro").fadeIn(); $("#mensagem").html(mostrar);
         });
     });
@@ -61,12 +61,11 @@ $(function () {
             $("#usuario").val('').focus();
             $("#email").val(''); $("#tel").val('');
             return false;
-        } else {
-            var botaoinserir = $("#botaoinserir").val();
+        } else {            
             var usuario = $("#usuario").val();
             var email = $("#email").val();
             var tel = $("#tel").val();
-            $.post("./app/model/acao.php", {botaoinserir:botaoinserir,usuario: usuario, email: email, tel: tel }, function (mostrar) {
+            $.post("app/valida.jsp", {botao:"botaoinserir",usuario: usuario, email: email, tel: tel }, function (mostrar) {
                 $("#quadro").fadeIn(); $("#mensagem").html(mostrar);
             });
         }
@@ -81,7 +80,7 @@ $(function () {
         } else {
             var usuario = $("#usuario").val();
             var senha = $("#senha").val();           
-            $.post("app/validar.jsp", {botao:"botaologin",usuario: usuario, senha: senha }, function (mostrar) {
+            $.post("app/valida.jsp", {botao:"botaologin",usuario: usuario, senha: senha }, function (mostrar) {
                 $("#quadro").fadeIn(); $("#mensagem").html(mostrar);
             });
         }
