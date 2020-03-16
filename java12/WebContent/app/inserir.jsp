@@ -1,1 +1,5 @@
-<% out.print("<h1>INSERIR OUT</h1>"); %>
+<fieldset>
+<%@include file="consultar.jsp"%>
+<br>
+<h1>INSERIR</h1>
+</fieldset>

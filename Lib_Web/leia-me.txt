@@ -1,0 +1,2 @@
+jstl para dentro do projeto em WEB-IN/lib
+mysql para dentro do Tomcat em tomcat/lib
