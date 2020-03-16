@@ -21,12 +21,11 @@ function alterar(x) {
             $("#ausuario").val('').focus(); $("#aemail").val(''); $("#atel").val('');
             return false;
         }
-        else {
-            var botaoalterar = $("#botaoalterar").val();
+        else {            
             var usuario = $("#ausuario").val();
             var email = $("#aemail").val();
             var tel = $("#atel").val();
-            $.post("./app/model/acao.php", {botaoalterar:botaoalterar , idd: idd, usuario: usuario, email: email, tel: tel }, function (mostrar) {
+            $.post("app/valida.jsp", {botao:"botaoalterar" , idd: idd, usuario: usuario, email: email, tel: tel }, function (mostrar) {
                 $("#quadro").fadeIn(); $("#mensagem").html(mostrar);
             });
         }

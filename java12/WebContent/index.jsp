@@ -22,6 +22,9 @@
 <body><div id="quadro"><div id="mensagem"></div></div><br>
 	<fieldset>
 		<legend class="sitename">Sistema JAVA JSP</legend>
+		<button type="button" onclick="window.location.href='?p=home'"
+			class="btn btn-secondary">Home</button>
+		&ensp;
 		<button type="button" onclick="window.location.href='?p=inserir'"
 			class="btn btn-success">Inserir</button>
 		&ensp;
@@ -30,9 +33,6 @@
 		&ensp;
 		<button type="button" onclick="window.location.href='?p=alterar'"
 			class="btn btn-warning">Alterar</button>
-		&ensp;
-		<button type="button" onclick="window.location.href='?p=contatos'"
-			class="btn btn-secondary">Contatos</button>
 		&ensp;
 		<button type="button" onclick="window.location.href='?p=sair'"
 			class="btn btn-dark">Sair</button>
@@ -46,7 +46,7 @@
 			<%@page errorPage="app/erro.jsp"%>
 			<%
 				String pagina = request.getParameter("p");
-				if (pagina == null) {
+				if (pagina == null || pagina.equals("home")) {
 			%><%@include file="app/home.jsp"%>
 			<%
 				} else if (pagina.equals("alterar")) {
@@ -54,9 +54,6 @@
 			<%
 				} else if (pagina.equals("apagar")) {
 			%><%@include file="app/apagar.jsp"%>
-			<%
-				} else if (pagina.equals("contatos")) {
-			%><%@include file="app/contatos.jsp"%>
 			<%
 				} else if (pagina.equals("inserir")) {
 			%><%@include file="app/inserir.jsp"%>
