@@ -7,10 +7,10 @@
 	</tr>
 	<c:forEach var="dados" items="${clientes.lista}">
 		<tr class="linha" id="linha${dados.id}" onclick="<%out.print(request.getParameter("p"));%>(${dados.id})">
-			<td class="tdid"><c:out value="${dados.id}" /></td>
-			<td class="tusuario${dados.id}"><c:out value="${dados.nome}" /></td>
-			<td class="ttelefone${dados.id}"><c:out value="${dados.telefone}" /></td>
-			<td class="temail${dados.id}"><c:out value="${dados.email}" /></td>
+			<td class="tdid">${dados.id}</td>
+			<td class="tusuario${dados.id}">${dados.nome}</td>
+			<td class="ttelefone${dados.id}">${dados.telefone}</td>
+			<td class="temail${dados.id}">${dados.email}</td>
 		</tr>
 	</c:forEach>
 </table>

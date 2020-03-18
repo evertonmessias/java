@@ -25,7 +25,7 @@ function alterar(x) {
             var usuario = $("#ausuario").val();
             var email = $("#aemail").val();
             var tel = $("#atel").val();
-            $.post("app/valida.jsp", {botao:"botaoalterar" , idd: idd, usuario: usuario, email: email, tel: tel }, function (mostrar) {
+            $.post("app/controller.jsp", {botao:"botaoalterar" , idd: idd, usuario: usuario, email: email, tel: tel }, function (mostrar) {
                 $("#quadro").fadeIn(); $("#mensagem").html(mostrar);
             });
         }
@@ -38,7 +38,7 @@ function apagar(y) {
     $('#linha' + y).css({ 'background-color': '#ccc' });
     idd = y;
     $("#botaoapagar").click(function () {               
-        $.post("app/valida.jsp", { botao:"botaoapagar",idd: idd }, function (mostrar) {
+        $.post("app/controller.jsp", { botao:"botaoapagar",idd: idd }, function (mostrar) {
             $("#quadro").fadeIn(); $("#mensagem").html(mostrar);
         });
     });
@@ -64,7 +64,7 @@ $(function () {
             var usuario = $("#usuario").val();
             var email = $("#email").val();
             var tel = $("#tel").val();
-            $.post("app/valida.jsp", {botao:"botaoinserir",usuario: usuario, email: email, tel: tel }, function (mostrar) {
+            $.post("app/controller.jsp", {botao:"botaoinserir",usuario: usuario, email: email, tel: tel }, function (mostrar) {
                 $("#quadro").fadeIn(); $("#mensagem").html(mostrar);
             });
         }
@@ -79,28 +79,9 @@ $(function () {
         } else {
             var usuario = $("#usuario").val();
             var senha = $("#senha").val();           
-            $.post("app/valida.jsp", {botao:"botaologin",usuario: usuario, senha: senha }, function (mostrar) {
+            $.post("app/controller.jsp", {botao:"botaologin",usuario: usuario, senha: senha }, function (mostrar) {
                 $("#quadro").fadeIn(); $("#mensagem").html(mostrar);
             });
         }
     });
-
-    $("#botaocontatos").click(function () {
-        if ($("#cusuario").val().length < 2 || $("#cemail").val().length < 2 || $("#cmsg").val().length < 2) {
-            $("#quadro").fadeIn(); $("#mensagem").html("Digite os campos corretamente !");
-            $("#cusuario").val('').focus();
-            $("#cemail").val(''); $("#cmsg").val('');
-            return false;
-        } else {
-            var botaocontatos = $("#botaocontatos").val();
-            var usuario = $("#cusuario").val();
-            var email = $("#cemail").val();
-            var msg = $("#cmsg").val();
-            $.post("./app/model/acao.php", {botaocontatos:botaocontatos, usuario: usuario, email: email, msg: msg }, function (mostrar) {
-                $("#quadro").fadeIn(); $("#mensagem").html(mostrar);$("#cusuario").val('').focus();
-                $("#cemail").val(''); $("#cmsg").val('');
-            });
-        }
-    });
-
 })
